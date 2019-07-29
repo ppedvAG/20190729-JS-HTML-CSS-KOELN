@@ -1,0 +1,2 @@
+html:5 - HTML Grundgerüst
+img:s - img-Tag mit scrset-Attribut. Attribute src und alt sind immer da

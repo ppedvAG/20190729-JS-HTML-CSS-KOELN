@@ -1,0 +1,2 @@
+alt B : open in default browser
+shift alt F : format document

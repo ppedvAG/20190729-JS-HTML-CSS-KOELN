@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS-basics</title>
+    <style>
+        /* Unversalselektor */
+        * {
+            border: red solid medium;
+
+        }
+
+        /* Tag-Selektor oder Typ-Selektor */
+        p {
+            color: hotpink;
+        }
+
+        /* id-Selektor */
+        #_parID {
+            text-align: center;
+        }
+
+        /* class-Selektor */
+        ._imgRemark {
+            font-size: 10px;
+        }
+
+        /* KOMBINATOREN */
+        /* Auflistung von mehreren Selektoren - Komma */
+        h1,
+        h2 {
+            font-size: 30px;
+        }
+
+        /* Geschwister-Selektoren */
+        h3+p {
+            font-style: italic;
+        }
+
+        /* Vorfahr-Nachfahr-Selektor */
+        .container p {
+            border: medium dashed black;
+        }
+        /* Eltern-Kind-Selektor */
+        .container > p {
+            color: rebeccapurple;
+        }
+    </style>
+</head>
+text in html
+<!-- ??? steht trotzdem in body -->
+
+<body>
+    text in body
+    <!-- Kommentar in HTML -->
+    <h1>HEADING 1</h1>
+    <h2>HEADING 2</h2>
+    <p>paragraph 1</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        <b>Vero</b>
+        , repudiandae.</p>
+    <a href="https://ppedv.de" target="_blanc">Link zu ppedv.de</a>
+
+    <img src="https://picsum.photos/200/200" alt="ein Bild">
+    <p class="_imgRemark">paragraph 1</p>
+
+    <img src="https://picsum.photos/200/200" alt="ein Bild">
+    <p class="_imgRemark">paragraph 2</p>
+
+    <img src="https://picsum.photos/200/200" alt="ein Bild">
+    <p class="_imgRemark">paragraph 3</p>
+
+    <p id="_parID">paragraph 4</p>
+
+
+    <h3>heading 3</h3>
+    <p>paragraph 5</p>
+
+    <h3>heading 3</h3>
+    <p>paragraph 6</p>
+
+    <div class="container">
+        <p>p Kind von container</p>
+        <div>
+            <p>p Enkel-Kind von container</p>
+        </div>
+    </div>
+    <div class="container">
+        <p>p Kind von container</p>
+        <div>
+            <p>p Enkel-Kind von container</p>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

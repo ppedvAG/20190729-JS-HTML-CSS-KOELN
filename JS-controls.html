@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS-controls</title>
+</head>
+
+<body>
+    <script>
+        var _softs = ['Cola', 'Fanta', 'Sprite'];
+        for (let i = 0; i < _softs.length; i++) {
+            if (_softs[i] === 'Fanta') {
+                _softs[i] = 'Orangina';
+            }
+        }
+        console.log(_softs);
+
+        var _spirits = ['Gin', 'Rum', 'Vodka'];
+        var s = 0;
+        while(s < _spirits.length) {
+            if (_spirits[s] === 'Rum') {
+                _spirits[s] = 'Cognac';
+            }
+            s++;
+        }
+        console.log(_spirits);
+
+    </script>
+
+</body>
+
+</html>

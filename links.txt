@@ -1,2 +1,11 @@
+https://etherpad.net/p/jscologne
+
 https://github.com/ppedvAG/20190729-JS-HTML-CSS-KOELN.git
+
+HTML, CSS, JS
 https://www.w3schools.com/
+https://wiki.selfhtml.org/
+
+https://developer.mozilla.org/de/docs/Web
+
+https://developer.mozilla.org/de/docs/Web/JavaScript

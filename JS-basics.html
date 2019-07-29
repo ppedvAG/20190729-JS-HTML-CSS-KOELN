@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS-basics</title>
+</head>
+
+<body>
+    <p>Eingabe aus Input muss in Output per Button-Click angezeigt werden.</p>
+    <label for="_InputV">VORNAME</label>
+    <input id="_inputV" type="text">
+    <label for="_InputN">NACHNAME</label>
+    <input id="_inputN" type="text">
+
+    <button onclick="_showInputValue()">OK</button>
+    <output id="_output"></output>
+    <script>
+        var _fontSize = 30;
+        console.log(_fontSize);
+        function _showInputValue() {
+            let text;
+            text = _inputV.value + ' ' + _inputN.value;
+            console.log(text);
+            _output.textContent = text;
+        }  
+    </script>
+    
+
+</body>
+
+</html>

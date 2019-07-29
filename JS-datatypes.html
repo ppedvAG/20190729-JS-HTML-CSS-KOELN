@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS-datatypes</title>
+</head>
+<body>
+    <script>
+        var _myString = 'irgendwelcher Text';
+        var _myString2 = "4";
+        var _myNumber = 5;
+        var _myBoolean = true;
+        var _test1 = undefined;
+        var _test2 = null;
+        var _mySymbol = Symbol('a');
+
+        console.log(typeof _myString); //string
+        console.log(typeof _myNumber); //number
+        console.log(typeof _myBoolean); //boolean
+        console.log(typeof _test1); //undefined
+        console.log(typeof _test2); //object ???ist kein primitive
+        console.log(typeof _mySymbol); //symbol
+
+/* CASTING */
+/* string to number */
+var _newNumber = +_myString2;
+console.log("typeof _newNumber: " + typeof _newNumber);
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS-array-methods</title>
+</head>
+<body>
+    <script>
+        let blumen = ['Rose', 'Tulpe', 'Narzisse', 'Nelke'];
+        
+        //concat()
+        let rw = blumen.concat(['Gladiole', 'Gänseblümchen']);
+        console.log(rw); // Array(6)
+        console.log(blumen); // Array(4)
+        
+        //toString()
+        rw = blumen.toString();
+        console.log(rw); // Rose,Tulpe,Narzisse,Nelke
+        console.log(typeof rw); // string
+        console.log(blumen); // Array(4)
+
+        //join()
+        rw = blumen.join('|');
+        console.log(rw); // Rose|Tulpe|Narzisse|Nelke
+        console.log(typeof rw); // string
+        console.log(blumen); // Array(4)
+
+        //indexOf()
+        rw = blumen.indexOf('Nelke');
+        console.log(rw); // 3        
+        console.log(blumen); // Array(4)
+
+        //unshift()
+        rw = blumen.unshift('Frühlingsrose');
+        //am Anfang
+        console.log(rw); // 5 - neue Länge vom Array       
+        console.log(blumen); // Array(5)!!!
+
+        //push()
+        rw = blumen.push('Sonnenblume');
+        //am Ende
+        console.log(rw); // 6 - neue Länge vom Array       
+        console.log(blumen); // Array(6)!!!
+
+        //pop()
+        //löscht letztes
+        rw = blumen.pop();
+        console.log(rw); // Sonnenblume      
+        console.log(blumen); // Array(5)!!!
+
+        //shift()
+        rw = blumen.shift();
+        console.log(rw); // Frühlingsrose      
+        console.log(blumen); // Array(4)!!!
+
+        //splice()
+        rw = blumen.splice(1, 2, 'Mimöschen', 'Astern');
+        console.log(rw); // Array [ "Tulpe", "Narzisse" ]      
+        console.log(blumen); // Array(4) [ "Rose", "Mimöschen", "Astern", "Nelke" ]
+
+        //reverse()
+        rw = blumen.reverse();
+        console.log(rw); // Array(4) [ "Nelke", "Astern", "Mimöschen", "Rose" ]   
+        console.log(blumen); // Array(4) [ "Nelke", "Astern", "Mimöschen", "Rose" ]
+
+        //map()
+        rw = blumen.map(element => element.length);
+        console.log(rw); // Array(4) [ 5, 6, 9, 4 ] 
+        console.log(blumen); // Array(4) [ "Nelke", "Astern", "Mimöschen", "Rose" ]
+        
+        /* element => { return 'Rose' !== element}
+        Wenn die Pfeilfunktion nur eine einzige Anweisung hat
+        Und diese Anweisung ist return-Anweisung,
+        dann geschw. Klammern und das Wort return sind optional */
+        
+        //filter()
+        rw = blumen.filter(element => { return 'Rose' !== element})
+        /* 'Rose' !== element sprich wenn element ist nicht gleich Rose */
+        console.log(rw); // Array(3) [ "Nelke", "Astern", "Mimöschen" ]
+        console.log(blumen); // // Array(4) [ "Nelke", "Astern", "Mimöschen", "Rose" ]
+
+        /* ITERATOREN FÜR ARRAYS */
+        let assoziativeBlumen = new Array(3);
+        assoziativeBlumen['Lieblingsblume'] = 'Nelke';
+        assoziativeBlumen['magMutti'] = 'Astern';
+        assoziativeBlumen['Allergieblume'] = 'Mimöschen';
+        console.log(assoziativeBlumen);
+
+        //for in
+        for (let element in assoziativeBlumen) {
+            element.toUpperCase();
+            console.log(element);
+        }
+
+        //for of
+        /* mit assoziativeBlumen hat es nicht funktioniert ???  */
+        for (let el of blumen) {            
+            console.log(el.toUpperCase());
+        }
+    </script>
+    
+</body>
+</html>

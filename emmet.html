@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emmet</title>
+
+</head>
+<body>
+    <!-- a + Enter -->
+    <a href="http:www.emmet.io">Link zu Emmet.io</a>
+    
+    <br>
+    <h1>Ihalt / Text</h1>
+    <p>Leerzeichen nur innerhalb von geschweiften Klammern erlaubt</p>
+    <!-- h1{Heading 1} -->
+    <h1>Heading 1</h1>
+    <hr>
+
+    <h1>Eltern-Kind / Verschachtelung</h1>
+    <!-- div>h1{Heading1 in div} -->
+    <div>
+        <h1>Heading1 in div</h1>
+    </div>
+    <hr>
+
+    <h1>Wiederholung</h1>
+    <!-- div>p{p}*3 -->
+    <div>
+        <p>p</p>
+        <p>p</p>
+        <p>p</p>
+    </div>
+    <hr>
+
+    <h1>Attribute</h1>
+    <!-- div>img[src="http:picsum.photos/200/?random"]*3 -->
+    <div>
+        <img src="http:picsum.photos/200/?random" alt="ein Bild">
+        <img src="http:picsum.photos/200/?random" alt="ein Bild">
+        <img src="http:picsum.photos/200/?random" alt="ein Bild">
+    </div>
+    <hr>
+
+    <h1>Nummerierung</h1>
+    <!-- div>h2{Abschnitt $$}*3 -->
+    <div>
+        <h2>Abschnitt 01</h2>
+        <h2>Abschnitt 02</h2>
+        <h2>Abschnitt 03</h2>
+    </div>
+    <hr>
+
+    <h1>IDs</h1>
+    <!-- div#container>div{div im container} -->
+    <div id="container">
+        <div>div im container</div>
+    </div>
+    <hr>
+
+    <h1>Klassen</h1>
+    <!-- div.divClass{div mit Klasse}*2 -->
+    <div class="divClass">div mit Klasse</div>
+    <div class="divClass">div mit Klasse</div>
+    <hr>
+
+    <h1>Attribut type</h1>
+    <!-- input:password -->
+    <input type="password" name="inpName" id="inpId">
+    <hr>
+
+    <h1>random text</h1>
+    <!-- ul>lorem10*5 -->
+    <!-- ul - unordered list -->
+    <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, pariatur?</li>
+        <li>Qui esse iure a temporibus ratione delectus quis est blanditiis.</li>
+        <li>Velit id fuga quia recusandae quam repudiandae beatae omnis et!</li>
+        <li>Hic dolores consequuntur possimus! Quae natus nihil fuga non dolorum!</li>
+        <li>Repellendus quam et quidem non exercitationem. Eos amet saepe impedit.</li>
+    </ul>
+    <hr>
+
+    <h1>verschachtelte Multiplikation</h1>
+    <!-- ol>(li{list item $ obere liste}>ol>li{list item $ untere liste}*2)*2 -->
+    <!-- ol - ordered list -->
+    <ol>
+        <li>
+            list item 1 obere liste
+            <ol>
+                <li>list item 1 untere liste</li>
+                <li>list item 2 untere liste</li>
+            </ol>
+        </li>
+        <li>
+            list item 2 obere liste
+            <ol>
+                <li>list item 1 untere liste</li>
+                <li>list item 2 untere liste</li>
+            </ol>
+        </li>
+    </ol>
+    <hr>
+
+    <h1>Geschwister</h1>
+    <!-- div>h1{h1}+p{p} -->
+    <div>
+        <h1>h1</h1>
+        <p>p</p>
+    </div>
+    <h2>Bei Verschachtelung und Klammern auch ohne Plus</h2>
+    <!-- div>(div>p{p}*2)(div>p{p}*2) -->
+    <div>
+        <div>
+            <p>p</p>
+            <p>p</p>
+        </div>
+        <div>
+            <p>p</p>
+            <p>p</p>
+        </div>
+    </div>
+
+
+    
+
+
+    
+
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS-string-methods</title>
+</head>
+<body>
+
+    <script>
+        let zk = new String('Zum Schmuck gehören Ohrringe, Armbänder, Halsketten, Ringe uvm.');
+    
+        //toUpperCase();
+        let rwToUpperCase = zk.toUpperCase();
+        console.log(rwToUpperCase); //
+        console.log(zk); // 
+
+        //toLowerCase();
+        let rwToLowerCase = zk.toLowerCase();
+        console.log(rwToLowerCase);
+        console.log(zk);
+
+        //charAt(number);
+        let rwCharAt = zk.charAt(5);
+        console.log(rwCharAt); // c
+        console.log(zk);
+        
+        //indexOf(string);
+        let rwIndexOf = zk.indexOf('y');
+        console.log(rwIndexOf); // -1
+        console.log(zk);
+        rwIndexOf = zk.indexOf('g');
+        /* Index vom ersten g wird zurückgegeben */
+        console.log(rwIndexOf); // 12
+        console.log(zk);
+
+        //lastIndexOf(string);
+        let rwLastIndexOf = zk.lastIndexOf('g');
+        console.log(rwLastIndexOf); // 56
+        console.log(zk);
+
+        //slice(number, number);
+        let rwSlice = zk.slice(4, 11);
+        /* schneidet ein Substring ab Stelle 4 bis Stelle 11 aus*/
+        console.log(rwSlice); // Schmuck
+        console.log(zk);
+
+        //substr(number, number);
+        let rwSubstr = zk.substr(4, 11);
+        /* schneidet ein Substring von 11 Zeichen ab Stelle 4 aus*/
+        console.log(rwSubstr); // 
+        console.log(zk);
+
+        //concat(string);
+        let rwConcat = zk.concat('n');
+        console.log(rwConcat); // n am Ende hinzugefügt
+        console.log(zk);
+
+        //Übung 'uvm' zu 'und vieles mehr' ausschreiben 
+        /* let indexVonUVM = zk.indexOf('uvm');
+        console.log(indexVonUVM); // 59 */
+        let zkOhneUVM = zk.substr(0, 59);
+        console.log(zkOhneUVM);
+        let neueZK = zkOhneUVM.concat('und vieles mehr');
+        console.log(neueZK);
+
+    </script>
+    
+</body>
+</html>

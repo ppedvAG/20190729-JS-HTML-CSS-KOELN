@@ -49,6 +49,16 @@
             _einePerson.auto2 = _zweitesAuto;            
             console.log(_einePerson);
 
+            /* ITERATOREN */
+            /* gibt Namen von Properties (Eigenschaften) aus */
+            for (let el in _einAuto) {
+                console.log(el);
+            }
+            /* TypeError: _einAuto is not iterable */
+            for (let el of _einAuto) {
+                console.log(el.value);
+            }
+
         
         </script>
     

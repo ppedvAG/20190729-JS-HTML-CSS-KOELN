@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS-date-object</title>
+</head>
+<body>
+    <output></output>
+
+    <script>
+        /* Datum-Variable erstellen mit der globalen Funktion Date() */
+        let datumOhneKonstruktor = Date();
+        console.log(datumOhneKonstruktor); // Wed Jul 31 2019 16:09:50 GMT+0200 (Mitteleuropäische Sommerzeit)
+        console.log(typeof datumOhneKonstruktor); // string
+
+        /* Datum erstellen mit dem Konstruktor vom Objekt Date */
+        let datum = new Date();
+        console.log(typeof datum); // object
+        
+        let rw;
+        //getDate()
+        rw = datum.getDate();
+        console.log(rw); // 31
+
+        //getDay()
+        rw = datum.getDay();
+        console.log(rw); // 3 
+        // 0 - Sonntag, 1 - Montag ...
+
+        //getHours()
+        console.log(datum.getHours());
+
+        //getMinutes()
+        console.log(datum.getMinutes());
+
+        //getMonth()
+        console.log(datum.getMonth()); // 6
+        // 0 - Jan, 1 - Feb ...
+
+        //getTime()
+        console.log(datum.getTime()); // 1 564 582 755 321
+
+        //getFullYear()
+        console.log(datum.getFullYear());
+
+        //toLocaleTimeString()
+        console.log(datum.toLocaleTimeString()); // 16:21:11
+
+    </script>
+
+</body>
+</html>

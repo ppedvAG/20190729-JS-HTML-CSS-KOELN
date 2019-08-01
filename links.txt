@@ -9,3 +9,6 @@ https://wiki.selfhtml.org/
 https://developer.mozilla.org/de/docs/Web
 
 https://developer.mozilla.org/de/docs/Web/JavaScript
+
+Regular Expressions
+http://regexlib.com/

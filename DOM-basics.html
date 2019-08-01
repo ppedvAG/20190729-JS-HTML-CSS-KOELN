@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM-basics</title>
+</head>
+<body>
+
+    <script>
+        let varBody = document.getElementsByTagName('body')[0];
+        console.log(varBody);
+
+        varBody.textContent = 'hallo';
+
+        /* varBody.textContent = varBody.textContent + '<h1>Überschrift</h1>'; */
+        /* verkürzte Schreibweise für die Zeile oben: */
+        /* weil rechts und links vom Zuweisungoperator '=' auf das Gleiche zugegriffen wird */
+        varBody.textContent += '<h1>Überschrift</h1>';
+        varBody.innerHTML = 'Plugin(s) <br>' +
+        '<table id="pluginTable"><thead>' +
+        '<tr><th>Name</th><th>Filename</th><th>Description</th><th>Version</th></tr>'+
+        '</thead><tbody></tbody></table>';
+
+        let table = pluginTable;
+
+        for (let i = 0; i < navigator.plugins.length; i++) {
+            let newRow = table.insertRow();
+            newRow.insertCell().textContent = navigator.plugins[i].name;
+            newRow.insertCell().textContent = navigator.plugins[i].filename;
+            newRow.insertCell().textContent = navigator.plugins[i].description;
+            newRow.insertCell().textContent = navigator.plugins[i].version;
+        } 
+        let tdsArr = document.getElementsByTagName('td');
+        for (let el of tdsArr) {
+            el.style.border = 'thin solid black';
+        }
+        console.log(pluginTable);
+        pluginTable.style.borderCollapse = 'collapse';
+        
+
+        
+    </script>
+    
+</body>
+</html>

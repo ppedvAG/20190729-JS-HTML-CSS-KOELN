@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS-var-let-const</title>
+</head>
+
+<body>
+    <script>
+        /* deklarieren */
+        let l;
+        var v;
+        //const c; // SyntaxError: missing = in const declaration
+        /* Konstanten sollen sofort initialisiert werden! */
+        const c = 7;
+
+        /* initialisieren */
+        l = 4;
+        v = 5;
+
+        /* beides zusammen */
+        let letVar = 'text1';
+        var varVar = 'text2';
+
+        /* redeklarieren */
+        var v = 3;
+        // let l = 2; // SyntaxError: redeclaration of let l
+        // const c = 8; // SyntaxError: redeclaration of const c
+        console.log(v); // 3
+        console.log(l); // 4
+
+        /* Variablen & globales Objekt window */
+        console.log(window);
+        function eineFunktion() {
+            console.log('hallo aus der Funktion');
+        }
+        /* let-Variablen und Konstanten gehen nicht in das globale Objekt rein. */
+        console.log(window.l); // undefined
+        console.log(window.v); // 3
+
+        /* SCOPES / GÜLTIGKEITSBEREICH VON VARIABLEN */
+        /* scope von let */
+        let b = 5;
+        console.log('b vor {} ' + b);
+        {
+            /* Wenn wir im Scope von geschw. Klammern eine Variable 
+            mit dem gleichen Namen deklarieren, können wir auf sie 
+            vor der Deklaration nicht zugreifen */
+            // ReferenceError: can't access lexical declaration `b' before initialization
+            /* Wenn wir im Scope von geschw. Klammern keine neue Variable 
+            mit dem gleichen Namen deklarieren, 
+            dann wird im oberen Scope nach dieser Variable geschaut*/
+            // console.log("b in {} vor 'b = 7'" + b);
+            // b = 7; 
+            // console.log('b in {} nach "b = 7"' + b); 
+            let b = 6;
+            console.log('b in {} nach "let b = 6" ' + b);
+        }
+        console.log('b nach {} ' + b);
+
+        /* scope von var */
+        var a = 2;
+        console.log('a vor {} ' + a);
+        {
+            console.log('a in {} vor "var a = 3" ' + a);
+            var a = 3;
+            console.log('a in {} nach "var a = 3" ' + a);
+        }
+        console.log('a nach {} ' + a);
+        /* var-Variablen kennen den Scope von geschw. Klammern nicht */
+
+        /* scope von const */
+        const d = 7;
+        console.log('d vor {} ' + d);
+        {
+            // console.log('d in {} vor "const d = 8" ' + d); 
+            // ReferenceError: can't access lexical declaration `d' before initialization
+            const d = 8;
+            console.log('a in {} nach "const d = 8" ' + d);
+        }
+        console.log('d nach {} ' + d);        
+        /* const verhält sich also ähnlich wie let*/
+
+        /* ist der Wert von const konstant? */
+        /* bei primitiven Datentypen darf man den Wert tatsächlich nicht ändern */
+        const e = 8;
+        // e = 4; // TypeError: invalid assignment to const `e'
+        /* bei komplexen Datentypen (sprich: Objektdatentypen) kann man deren Bestandteile manipulieren */
+        const f = [4, 5, 6];
+        f[1] = 9;
+        console.log(f);
+
+        f[3] = 7;
+        console.log(f);
+        /* es ist aber nicht möglich, komplett neuen Wert zuweisen */
+        // f = [2, 3]; // TypeError: invalid assignment to const `f'
+
+
+
+
+    </script>
+
+</body>
+
+</html>
